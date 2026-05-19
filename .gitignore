@@ -1,0 +1,34 @@
+# Gradle
+.gradle/
+build/
+*.iml
+
+# Android Studio
+.idea/
+*.orig
+captures/
+.externalNativeBuild/
+.cxx/
+
+# NDK
+*.o
+*.a
+*.so
+*.d
+
+# Keystore
+*.jks
+*.keystore
+
+# Local SDK paths
+local.properties
+sdk.dir
+
+# macOS
+.DS_Store
+
+# CI artifacts
+app/build/arcore-native/
+
+# Don't commit real stb_image.h (download in CI via workflow)
+# (keep the stub for offline awareness)

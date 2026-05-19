@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.veloar.app.ARRacingGLSurfaceView
+        android:id="@+id/glSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+        <TextView android:id="@+id/tvStatus" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="#FFFFFF" android:textSize="15sp" android:text="Initializing..." />
+        <TextView android:id="@+id/tvSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="22sp" android:text="0 km/h" android:visibility="invisible" android:layout_marginEnd="16dp" />
+        <TextView android:id="@+id/tvFps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#AAFFFFFF" android:textSize="12sp" android:text="-- fps" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvHint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:textColor="#FFFFFF" android:textSize="17sp" android:background="#55000000" android:paddingHorizontal="16dp" android:paddingVertical="8dp" android:text="" />
+
+    <Button android:id="@+id/btnPlaceCar" android:layout_width="180dp" android:layout_height="56dp" android:layout_gravity="center_horizontal|bottom" android:layout_marginBottom="120dp" android:text="PLACE CAR" android:backgroundTint="#CC2979FF" android:visibility="gone" />
+
+    <com.veloar.app.VirtualJoystick android:id="@+id/joystick" android:layout_width="160dp" android:layout_height="160dp" android:layout_gravity="bottom|start" android:layout_marginStart="16dp" android:layout_marginBottom="16dp" android:visibility="invisible" />
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:orientation="vertical" android:layout_marginEnd="16dp" android:layout_marginBottom="16dp">
+        <Button android:id="@+id/btnThrottle" android:layout_width="100dp" android:layout_height="80dp" android:text="GAS" android:backgroundTint="#CC22C55E" android:visibility="invisible" />
+        <Button android:id="@+id/btnBrake" android:layout_width="100dp" android:layout_height="80dp" android:text="BRAKE" android:backgroundTint="#CCEF4444" android:visibility="invisible" android:layout_marginTop="8dp" />
+        <Button android:id="@+id/btnHandbrake" android:layout_width="100dp" android:layout_height="56dp" android:text="DRIFT" android:backgroundTint="#CCF59E0B" android:visibility="invisible" android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <Button android:id="@+id/btnReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|center_horizontal" android:layout_marginBottom="16dp" android:text="RESET" android:backgroundTint="#88FFFFFF" android:textColor="#000000" android:visibility="invisible" />
+
+</FrameLayout>
